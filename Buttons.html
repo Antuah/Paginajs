@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Videogame</title>
+    <style>
+        body {
+            background-image: url("fondop.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Tahoma;
+            font-size: 5em;
+            color: white;
+        }
+
+        h2 {
+            text-align: center;
+            color: yellow;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: 1em;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+        }
+
+        h3 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3em;
+        }
+    </style>
+</head>
+
+<body id="imagen">
+    <h1>Pixel Quest</h1>
+    <h1>Informacion</h1>
+    <br />
+    <h2 style="border-bottom: 20px solid yellow"></h2>
+    <h2 id="texto">
+        "Pixel Quest" ¡Adentrate a tu nueva aventura! <br /><br />
+        Fecha de lanzamiento oficial 4 de noviembre de 2004<br />
+        Desarrolladores: Capcom, Flagship
+        <button onclick="cambiarTexto()">Cambiar</button>
+    </h2>
+    <br />
+    <br />
+    <br />
+    <center><button onclick="restablecerImagen()">Restablecer
+            imagen</button>
+        </button><button onclick="cambiarCap()">Cambiar</button></center>
+    <br />
+    <br />
+    <marquee>
+        <table align="center" width="100" border="1">
+            <tr>
+
+                <img id="img" src="Caps game.jpg" alt="" />
+                &nbsp; &nbsp;
+                <img src="Captura.jpg" width="580" height="420" />
+                &nbsp; &nbsp;
+                <img src="-the-legend-of-zelda-the-minish-cap-recensione-1915-1280x16.jpg" width="580" height="420" />
+            </tr>
+        </table>
+    </marquee>
+    <br/>
+    <br/>
+    <br/>
+    <center><button onclick="cambiarAtributo()">Cambiar Fondo</button></center>
+    <br/>
+    <br/>
+    <br/>
+    <h3>Reseñas:</h3>
+    <marquee>
+        <table align="center" width="100" border="1">
+            <tr>
+                <img src="Reseña1.png" alt="" />
+                &nbsp; &nbsp;
+                <img src="Reseña2.png" width="" height="290" />
+                &nbsp; &nbsp;
+                <img src="Reseña3.png" width="" height="290" />
+            </tr>
+        </table>
+    </marquee>
+    <br/>
+    <h2 id="vanish">Hola mundo :D</h2>
+    <center><button onclick="desaparecerTexto()">Adios mundo?</button></center>
+    <br/>
+    <h3>Calificacion:</h3>
+    <center><img src="Calificacion.png" alt="" /></center>
+    <h2>Vandal Calification</h2>
+    <br/>
+   <center><div id="div1"></div></center> 
+    <center><button onclick="escribirTexto()"> Hola </button></center>
+    <br>
+    <span>&copy; 2023 Entertainment Videogames</span>
+</body>
+<script>
+    function cambiarTexto() {
+        document.getElementById("texto").innerHTML =
+            "Soy un texto <strong>modificado</strong>";
+    }
+
+    function cambiarAtributo() {
+        document.getElementById("imagen").style.backgroundImage = "url(Ola.jpg)";
+    }
+    function desaparecerTexto() {
+        document.getElementById("vanish").innerHTML =
+            " ";
+    }
+    function cambiarCap() {
+        imagen.src = "123.jpg";
+    }
+    var imagen = document.getElementById("img");
+    var imagenOriginalSrc = imagen.src;
+
+    function escribirTexto() {
+        var div = document.getElementById("div1");
+        var h1 = document.createElement("h1");
+        h1.textContent = "Hola?";
+        h1.style.color = "black";
+        div.appendChild(h1);
+    }
+
+    function restablecerImagen() {
+        imagen.src = imagenOriginalSrc;
+    }
+</script>
+
+</html>
