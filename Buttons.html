@@ -101,12 +101,36 @@
     <center><img src="Calificacion.png" alt="" /></center>
     <h2>Vandal Calification</h2>
     <br/>
+    <br>
+    <br><script>
+ 
+  </script>
+</head>
+<body>
+  <h2>Array de imágenes con botones</h2>
+  <center><img id="image" src="imagen1.jpg" alt="Imagen"></center>
+  <br>
+  <center><button onclick="cambiarImagenAtras()">Atrás</button></center>   
+  <center><button onclick="cambiarImagenAdelante()">Adelante</button></center>
+    </script>
+    <br>
    <center><div id="div1"></div></center> 
     <center><button onclick="escribirTexto()"> Hola </button></center>
     <br>
     <span>&copy; 2023 Entertainment Videogames</span>
 </body>
 <script>
+       function cambiarImagenAdelante() {
+      var image = document.getElementById("image");
+      currentIndex = (currentIndex + 1) % images.length;
+      image.src = images[currentIndex];
+    }
+
+    function cambiarImagenAtras() {
+      var image = document.getElementById("image");
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      image.src = images[currentIndex];
+    }
     function cambiarTexto() {
         document.getElementById("texto").innerHTML =
             "Soy un texto <strong>modificado</strong>";
@@ -135,7 +159,16 @@
 
     function restablecerImagen() {
         imagen.src = imagenOriginalSrc;
-    }
+    }   
+    var images = [
+      "123.jpg",
+      "Ola.jpg",
+      "the-legend-of-zelda-the-minish-cap-recensione-1915-1280x16.jpg",
+      "Caps game.jpg",
+      "Captura.jpg"
+    ];
+    var currentIndex = 0;
+
 </script>
 
 </html>
